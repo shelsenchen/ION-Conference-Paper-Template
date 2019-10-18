@@ -1,0 +1,141 @@
+\documentclass[a4paper,notitlepage,onecolumn,10pt]{article}
+\usepackage{fontspec}
+\usepackage{titlesec}
+\usepackage{setspace}
+\usepackage{cite}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage[a4paper,left=1.5cm,right=1.5cm,top=3cm,bottom=3cm]{geometry} %
+\pagestyle{empty} %
+
+\usepackage[justification=centering,font=scriptsize]{caption}
+\usepackage{subfigure}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{upgreek}
+%\usepackage{hyperref}
+
+\DeclareCaptionFont{capfont}{\fontspec{Calibri}}
+\captionsetup{font=capfont}
+
+
+%\hypersetup{
+%	colorlinks=true,
+%	linkcolor=blue,
+%	filecolor=green,
+%	urlcolor=yellow,
+%	citecolor=cyan,%cyan,
+%}
+
+%\hypersetup{hidelinks}
+
+
+\titleformat{\section}[block]
+	{\setmainfont{Times New Roman}\fontsize{10pt}{\baselineskip}\selectfont}
+	{}
+	{0pt}
+	{}
+  
+\titleformat{\subsection}[block]
+	{\setmainfont{Times New Roman}\fontsize{10pt}{\baselineskip}\selectfont}
+	{}
+	{0pt}
+	{}
+	
+  
+
+\begin{document}
+\setmainfont{Times New Roman}
+\begin{center}
+	%\singlespacing
+	\linespread{1.5}\selectfont
+	\fontsize{24pt}{\baselineskip}\selectfont\textbf{Title of Paper}
+\end{center}
+\begin{center}
+	\linespread{1}\selectfont
+	\fontsize{10pt}{\baselineskip}\selectfont{Three Zhang$^{\star}$, Four Li$^{\star}$, Five Wang$^{\star \dagger}$,\\
+		 \textit{$^{\star}$Department of ***, Tsinghua University, Beijing 100084, China}\\
+		\textit{$^{\dagger}$Beijing National Research Center for Information Science and Technology (BNRist),}\\ 
+		\textit{Tsinghua University, Beijing 100084, China}}
+\end{center}
+
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+
+\section*{\textbf{BIOGRAPHIES}}\label{biography}
+
+\textbf{Three Zhang} is ****.\\
+~\\
+\textbf{Four Li} is ***. \\
+~\\
+\textbf{Five Wang} is ***.
+
+\section*{\textbf{ABSTRACT}}\label{abstract}
+
+Insert abstract here (approximately 300 words).
+
+
+\section{\textbf{\arabic{section}. INTRODUCTION}}\label{sec1.introduction}
+
+Paper Length: Papers submitted for peer review should not exceed the Maximum of 15 Pages.  Unlimited page number is allow for papers not being peer reviewed . If your paper was created in {\LaTeX}, then just submit the PDF file. Please do not secure your files. \\
+\begin{figure}[hbtp]
+	\centering
+	\subfigure[\fontspec{Calibri} ION logo.]{
+		\label{fig.1a}
+		\begin{minipage}[b]{0.45\textwidth} 
+			\centering 
+			\includegraphics[width=4.5cm]{ion-logo.png} 
+		\end{minipage}}
+	\quad
+	\subfigure[\fontspec{Calibri} Tsinghua logo.]{
+		\label{fig.1b}
+		\begin{minipage}[b]{0.45\textwidth} 
+			\centering 
+			\includegraphics[width=4.5cm]{TsinghuaLogo.eps}
+		\end{minipage}}
+	\caption{ION logo and Tsinghua logo.}
+	\label{fig.1}
+\end{figure}
+~\\
+The remainder of this paper is organized as follows. ****. At last, conclusions are drawn in Section~{\ref{sec6}}.
+
+\subsection{\textbf{\arabic{section}.1 Title of Subsection}}
+
+ION cannot accept {\LaTeX} files, all {\LaTeX}  documents must be converted to PDF file prior to submission. Make sure the file is formatted properly before uploading to the AMP.  Documents converted from the {\LaTeX} or {\TeX} typesetting language into the Adobe’s Postscript of PDF files usually contain fixed-resolution bitmap fonts that do not print or display well on a variety of printer and computer screens. \\
+\begin{table}[!htb]
+	\centering
+	%\newcolumntype{V}{!{\vrule width 1.5pt}} % \hfill \quad
+	\caption{Title of Table.}
+	\vspace{-7pt}
+	\begin{tabular}{ L{3cm}|R{2.5cm}  R{2.5cm} }
+		\Xhline{1pt}
+		ABCDEFG &  HIJKLMN &  OPQ\\
+		\Xhline{1pt}
+		*** & 1.0001 & $ -$1.00001  \\
+		\hline
+		*** &  2.0002 & $ -$2.00002 \\
+		\hline
+		*** & $ -$33.0033  & 3.00003\\
+		\Xhline{1pt}
+	\end{tabular}
+	\label{tab2}
+\end{table}
+~\\
+Books: \cite{Kay1998,kaplan2005,xiegang2009}.\\
+
+
+\section{\textbf{\arabic{section}. CONCLUSIONS}}\label{sec6}
+
+In this paper, ****. 
+
+\section{\textbf{ACKNOWLEDGMENTS}}\label{sec7}
+
+This work was supported by the National Natural Science Foundation of China (Grant No.~***) and *** Research Program (Grant No.~***).
+
+\renewcommand\refname{\textbf{REFERENCES}}
+%\setlength{\itemsep}{0pt} % add to .bbl file, at the end of the second line
+\bibliography{mybibtex2019}
+\bibliographystyle{IEEEtran}
+
+\end{document}
